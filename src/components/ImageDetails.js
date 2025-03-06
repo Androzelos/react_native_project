@@ -7,7 +7,6 @@ const ImageDetails = ({ title, imgSrc }) => {
     return(
         <View>
             <Image source={imgSrc}/>
-
             <Text>No mein Führer pls don't {title}</Text>
         </View>
     );
