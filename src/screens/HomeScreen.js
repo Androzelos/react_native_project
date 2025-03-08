@@ -1,33 +1,24 @@
 import React from "react";
-import { Text, StyleSheet, Button, View, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, Button, View, FlatList } from "react-native";
+import NavButton from "../components/NavButton";
 
 const HomeScreen = ({ navigation }) => {
+  const screens = [
+    {name: "Components"},
+    {name: "List"},
+    {name: "Image"},
+    {name: "ImageDetails"},
+    {name: "Counter"},
+    {name: "Color"},
+    {name: "Square"},
+  ]
+
   return(
     <View>
       <Text style={styles.text}>Experimental</Text>
-      <Button
-        onPress={() => navigation.navigate('Components')}
-        title="Go to Components Demo" 
-      />
-      <Button
-        onPress={() => navigation.navigate('List')}
-        title="Go to List Demo"
-      />
-      <Button
-        onPress={() => navigation.navigate('Image')}
-        title="Go to Image Demo"
-      />
-      <Button
-        onPress={() => navigation.navigate('ImageDetails')}
-        title="Go to Image Details Demo"
-      />
-      <Button
-        onPress={() => navigation.navigate('Counter')}
-        title="Go to Counter Demo"
-      />
-      <Button
-        onPress={() => navigation.navigate('Color')}
-        title="Go to Color Demo"
+      <NavButton
+       screensList={screens}
+       navigation={navigation}
       />
     </View>
   )
